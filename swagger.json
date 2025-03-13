@@ -1,0 +1,44 @@
+{
+  "definition": {
+    "openapi": "3.0.0",
+    "info": {
+      "title": "CBL ERP HR Management API",
+      "version": "1.0.0",
+      "description": "API documentation for HR Management System"
+    },
+    "servers": [
+      {
+        "url": "http://localhost:5001",
+        "description": "Development server"
+      }
+    ],
+    "components": {
+      "securitySchemes": {
+        "bearerAuth": {
+          "type": "http",
+          "scheme": "bearer",
+          "bearerFormat": "JWT"
+        }
+      }
+    },
+    "tags": [
+      {
+        "name": "Auth",
+        "description": "Authentication endpoints"
+      },
+      {
+        "name": "Employees",
+        "description": "Employee management"
+      },
+      {
+        "name": "Attendance",
+        "description": "Attendance tracking"
+      },
+      {
+        "name": "Payroll",
+        "description": "Payroll management"
+      }
+    ]
+  },
+  "apis": ["./routes/*.js"]
+} 
